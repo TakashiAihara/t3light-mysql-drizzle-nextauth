@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - ${MYSQL_PORT}:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    restart: always
+    networks:
+      - mysql-network
+
+  adminer:
+    image: adminer
+    profiles:
+      - mysql-debug
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - mysql-network
+
+networks:
+  mysql-network:
+    driver: bridge
