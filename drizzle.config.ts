@@ -1,5 +1,6 @@
 import { type Config } from "drizzle-kit";
 import { dbUri } from "~/env";
+import { APP_CONTEXT } from "~/index";
 
 export default {
   schema: "./src/server/db/schema.ts",
@@ -7,5 +8,5 @@ export default {
   dbCredentials: {
     uri: dbUri,
   },
-  tablesFilter: ["unique-feed_*"],
+  tablesFilter: [`${APP_CONTEXT}_*`],
 } satisfies Config;
