@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "ms-vscode-remote.remote-containers",
+    "usernamehw.errorlens",
+    "ms-vscode.vscode-typescript-next",
+    "streetsidesoftware.code-spell-checker",
+    "imgildev.vscode-drizzle-snippets",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "jawandarajbir.react-vscode-extension-pack",
+    "bradlc.vscode-tailwindcss"
+  ]
+}
