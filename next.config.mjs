@@ -4,7 +4,11 @@
  */
 import { fileURLToPath } from "node:url";
 import createJiti from "jiti";
-import { envFilePaths } from "~/env";
+
+const envFilePaths = [
+  "./src/env/client",
+  "./src/env/server",
+]
 
 const jiti = createJiti(fileURLToPath(import.meta.url));
 

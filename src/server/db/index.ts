@@ -13,7 +13,9 @@ const globalForDb = globalThis as unknown as {
   conn: Pool | undefined;
 };
 
-const conn = globalForDb.conn ?? createPool({
+const conn =
+  globalForDb.conn ??
+  createPool({
     uri: dbUri,
   });
 if (serverEnv.NODE_ENV !== "production") globalForDb.conn = conn;

@@ -1,10 +1,7 @@
-import { serverEnv } from "./server"
-import { clientEnv } from "./client"
+import { serverEnv } from "./server";
+import { clientEnv } from "./client";
 
-export {
-  serverEnv,
-  clientEnv
-};
+export { serverEnv, clientEnv };
 
 const {
   MYSQL_DATABASE: database,
@@ -14,9 +11,6 @@ const {
   MYSQL_PORT: port,
 } = serverEnv;
 
-export const envFilePaths = [
-  "./src/env/client",
-  "./src/env/server",
-] as const;
+export const envFilePaths = ["./src/env/client", "./src/env/server"] as const;
 
-export const dbUri = `mysql://${user}:${password}@${host}:${port}/${database}`
+export const dbUri = `mysql://${user}:${password}@${host}:${port}/${database}`;
